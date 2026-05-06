@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/starry.jpg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Star.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <nav>
+            <a href="Star.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="skills.html">Skills</a>
+            <a href="works.html">Works</a>
+        </nav> 
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Carousel -->
+        <div class="carousel-container">
+            <div id="fullCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#fullCarousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#fullCarousel" data-bs-slide-to="1"></li>
+                </ol>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Images/wipex1.png" class="d-block w-100 fullbook " alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Wipex x elena girardi
+                          </h5>
+                          </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/cocaart.png" class="d-block w-100 fullbook " alt="Slide 2">        
+                            <div class="carousel-caption d-none d-md-block">
+                          <h5>COCA COLA x The Great Wave off Kanagawa
+                        </h5>
+                        </div>
+                    </div>
+  
+                </div>
+
+                <!-- Previous & Next Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#fullCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#fullCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS (Only Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

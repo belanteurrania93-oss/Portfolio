@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Lavolta;
+    background-color: black;
+
+}
+.stars {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
+    animation: twinkle 5s infinite alternate;
+    z-index: -1; /* Puts stars behind everything */
+
+}
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    opacity: 0.6;
+    animation: twinkle 5s infinite alternate-reverse;
+}
+
+/* Twinkle effect */
+        /* Twinkle effect */
+        @keyframes twinkle {
+            0% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.02); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .earth {
+            position: fixed;
+            bottom: -2950px; /* Push part of the Earth below the screen */
+            right: 100%; /* Move it to the right */
+            overflow: hidden;
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Perfect centering */
+            width: 4000px; /* Adjust size */
+            height: auto;
+            animation: spin 500s linear infinite; /* Slow, smooth rotation */
+            z-index: -1; /* Ensures it stays behind other elements */
+            background-size: cover;
+            will-change: transform;
+            box-shadow: #139ac7a8;
+            backface-visibility: hidden;
+            transform-style: flat;
+            box-shadow: 50px 50px 20px rgba(53, 232, 232, 0.5); /* Soft shadow */
+
+        }
+        
+        @keyframes spin {
+            from {
+                transform: translateX(-45%) rotate(0deg);
+                filter: brightness(0.5);
+                
+            }
+            to {
+                transform: translateX(-30%) rotate(360deg);
+                filter: brightness(1);
+            }
+        }
+/* Sidebar Styles */
+.sidebar {
+    width: 220px;
+    height: 100vh; /* Full height */
+    background-color: #000000;
+    color: white;
+    position: fixed; /* Stays in place */
+    left: 0;
+    top: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    gap: 70px;
+    z-index: 1000; /* Higher than .stars to keep it visible */
+    animation: slideInSidebar 1s ease-out forwards;
+
+}
+@keyframes slideInSidebar {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 45px 10px;
+    transform-origin: center;
+    font-size: 40px;
+    text-shadow: 0 0 30px #ffffff, 0 0 30px #bdbbbb;
+    text-align: center; /* Center text */
+
+}
+
+.sidebar a:hover {
+    transform: scale(1.2);
+    color: crimson;
+    text-shadow: 0 10px 30px #ff0000, 0 0 30px #ff0c0c;
+    
+}
+
+/* Main Content */
+h1 {
+    margin-left: 250px; /* Same width as sidebar */
+    padding: 20px;
+    flex-grow: 1;
+    margin-top: 180PX;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    font-size: 190px;
+    font-family: Lavolta Swash;
+    text-shadow: 0 0 20px #a3a3a3, 0 0 20px #bdbbbb;
+    color: #ffffff;
+}
+#aboutme
+{
+    font-family: Lavolta;
+}
+        /* Main Content */
+        .main-content {
+            margin-left: 280px; /* Same width as sidebar */
+            margin-right: 50px;
+            padding: 20px;
+            flex-grow: 1;
+            color: aliceblue;
+            text-shadow: 0 0 10px #120000, 0 0 10px #000000;
+            font-size: 40px;
+            margin-top: 60px;
+            line-height: 1.8;   /* Adjusts spacing between lines */
+            text-align: center
+            ;
+            animation: slideInRight 2.3s ease-out forwards;
+            
+
+
+        }
+.about-bg 
+{
+
+    position: fixed;
+
+    z-index: -1; /* Puts stars behind everything */
+
+}        
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+         }
+h1
+{
+    animation: slideInRight 2.3s ease-out forwards; 
+}
+.logiciel
+{
+
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    right: 420px; /* Push to the right side */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images */
+    align-items: flex-end; /* Align to the right */
+
+}
+.logiciel img
+{
+    
+    
+    width: 120px; /* Adjust size */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded edges */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Optional: Shadow effect */
+    animation: slideInRight 2.3s ease-out forwards; 
+
+
+
+}
+.separator {
+    position: absolute;
+    top: 50px; /* Adjust to match the image-stack */
+    left: calc(900px + 20px); /* Adjust based on your sidebar width */
+    width: 2px; /* Line thickness */
+    height: 90vh; /* Line height, adjust as needed */
+    background-color: rgba(255, 255, 255, 0.5); /* Line color */
+    animation: slideIn 2.3s ease-out forwards;
+
+}
+.word-stack {
+    position: absolute;
+    left: calc(600px + 30px); /* Sidebar width + some spacing */
+    top: 100px; /* Adjust vertical positioning */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between words */
+    font-size: 40px;
+    color: white; /* Adjust as needed */
+    text-align: center;
+    animation: slideInLeft 2.3s ease-out forwards;
+    text-shadow: 0 0 10px#000000, 0 0 10px #bdbbbb;
+
+
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-70px); /* Start 50px below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+.button-container {
+    position: absolute;
+    left: calc(180px + 50px); /* Adjust for sidebar (250px width + margin) */
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 120px); /* 4 buttons per row */
+    grid-gap: 170px; /* Space between buttons */
+    justify-content: center; /* Centers within the container */
+    width: calc(100vw - 250px - 100px); /* Adjust width considering sidebar */
+    row-gap: 90px; /* Adjust vertical gap between rows */
+
+}
+
+.square-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    background-color: #000000;
+    color: rgb(209, 197, 197);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background:
+    radial-gradient(2px 2px at 10% 20%, white,transparent),
+    radial-gradient(1.5px 1.5px at 30% 50%, white, transparent),
+    radial-gradient(2.5px 2.5px at 60% 80%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 50% 90%, white, black);
+
+}
+
+
+.square-btn:hover {
+    background:
+    radial-gradient(2px 2px at 10% 20%, white,transparent),
+    radial-gradient(1.5px 1.5px at 30% 50%, white, transparent),
+    radial-gradient(2.5px 2.5px at 60% 80%, white, transparent),
+    radial-gradient(1px 1px at 80% 10%, white, transparent),
+    radial-gradient(2px 2px at 50% 90%, white, #8a0303);   
+    color: rgb(7, 7, 144);
+    transform: scale(1.05);
+}
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 250px; /* Adjust according to sidebar width */
+    width: calc(100% - 250px); /* Exclude sidebar */
+    height: 100vh;
+    overflow: hidden;
+    font-size: 90px;
+    text-shadow: 0 0 10px#000000, 0 0 10px #383838;
+}
+
+.carousel-inner, .carousel-item, .carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures full coverage */
+
+}
+h5
+{
+    font-size: 50px;
+    text-shadow: 0 0 10px#000000, 0 0 10px #383838;
+
+}
+/* Custom styling for indicators */
+.carousel-indicators li {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.small-image {
+    max-width: 40% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 100px;
+}
+.fullbook 
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 90px;
+  
+}
+.event
+{
+    max-width: 50% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 100px;
+  
+}
+.affiche
+{
+    max-width: 32% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 50px; 
+}
+.natrol
+{
+    max-width: 27% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 40px; 
+
+}
+.catre 
+{
+    max-width: 45% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 150px; 
+
+}
+.laka 
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 80px; 
+
+}
+.perla 
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 110px; 
+
+}
+.shampoo 
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 120px; 
+
+}
+.logo
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 200px; 
+
+}
+.tram
+{
+    max-width: 60% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 50px; 
+
+}
+.bab 
+{
+    max-width: 40% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 70px; 
+
+}
+.dib 
+{
+    max-width: 30% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 40px; 
+ 
+}
+.rach 
+{
+    max-width: 30% !important; /* Shrinks the image while keeping proportions */
+    height: auto !important;  /* Ensures aspect ratio is maintained */
+    margin: auto;  /* Centers the image */
+    display: block; /* Ensures proper alignment */
+    margin-top: 70px; 
+ 
+}

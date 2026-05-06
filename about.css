@@ -1,0 +1,10 @@
+        /* Main Content */
+        .Main-content {
+            margin-left: 250px; /* Same width as sidebar */
+            padding: 20px;
+            flex-grow: 1;
+        }
+body
+{
+    font-family: lavolta;
+}        
