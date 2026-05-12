@@ -472,19 +472,30 @@ h5
 }
 @media (max-width: 768px) {
     .sidebar {
-        width: 100%;       /* Take up the full width of the phone */
-        height: auto;      /* Height depends on the buttons inside */
-        position: fixed;   /* Stay at the top (or bottom) */
-        flex-direction: row; /* Buttons sit side-by-side instead of stacked */
-        justify-content: space-around; /* Space buttons evenly */
-        gap: 10px;         /* Smaller gap for small screens */
-        padding: 10px;
-        bottom: 0;         /* Optional: Put it at the bottom like an app menu */
-        top: auto;         /* If putting it at the bottom, reset 'top' */
+        width: 100vw;       /* Force it to span the full phone width */
+        height: 70px;       /* Give it a fixed slim height */
+        position: fixed;    
+        top: 0;             /* Stick it to the top */
+        left: 0;
+        flex-direction: row; /* Horizontal line */
+        gap: 10px;          /* Small gap so buttons don't fall off screen */
+        padding: 0 10px;
+        justify-content: center; 
+        align-items: center;
+        border-bottom: 1px solid #333; /* Optional: adds a little divider */
     }
 
     .sidebar a {
-        font-size: 18px;   /* Shrink text so it fits */
-        padding: 10px;
+        font-size: 16px;    /* Much smaller for mobile */
+        padding: 5px;
+        text-shadow: 0 0 10px #ffffff;
+    }
+
+    /* CRITICAL: This stops your text from being hidden behind the sidebar */
+    .main-content, h1 {
+        margin-left: 0 !important; 
+        margin-top: 100px !important; /* Push content down below the top bar */
+        width: 100%;
+        font-size: 40px; /* Shrink that massive 190px H1 for mobile */
     }
 }
