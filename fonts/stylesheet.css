@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Lavolta';
+    src: url('Lavolta.woff2') format('woff2'),
+        url('Lavolta.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
