@@ -16,7 +16,7 @@
 
 body {
     display: flex;
-    font-family: Lavolta;
+    font-family: 'Lavolta', serif;
     background-color: black;
 
 }
@@ -143,7 +143,7 @@ h1 {
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     font-size: 190px;
-    font-family: Lavolta Swash;
+     font-family: 'Lavolta', serif;
     text-shadow: 0 0 20px #a3a3a3, 0 0 20px #bdbbbb;
     color: #ffffff;
 }
