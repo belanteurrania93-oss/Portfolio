@@ -104,24 +104,7 @@ body {
     animation: slideInSidebar 1s ease-out forwards;
 
 }
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;       /* Take up the full width of the phone */
-        height: auto;      /* Height depends on the buttons inside */
-        position: fixed;   /* Stay at the top (or bottom) */
-        flex-direction: row; /* Buttons sit side-by-side instead of stacked */
-        justify-content: space-around; /* Space buttons evenly */
-        gap: 10px;         /* Smaller gap for small screens */
-        padding: 10px;
-        bottom: 0;         /* Optional: Put it at the bottom like an app menu */
-        top: auto;         /* If putting it at the bottom, reset 'top' */
-    }
 
-    .sidebar a {
-        font-size: 18px;   /* Shrink text so it fits */
-        padding: 10px;
-    }
-}
 
 @keyframes slideInSidebar {
     from {
@@ -486,4 +469,22 @@ h5
     display: block; /* Ensures proper alignment */
     margin-top: 70px; 
  
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;       /* Take up the full width of the phone */
+        height: auto;      /* Height depends on the buttons inside */
+        position: fixed;   /* Stay at the top (or bottom) */
+        flex-direction: row; /* Buttons sit side-by-side instead of stacked */
+        justify-content: space-around; /* Space buttons evenly */
+        gap: 10px;         /* Smaller gap for small screens */
+        padding: 10px;
+        bottom: 0;         /* Optional: Put it at the bottom like an app menu */
+        top: auto;         /* If putting it at the bottom, reset 'top' */
+    }
+
+    .sidebar a {
+        font-size: 18px;   /* Shrink text so it fits */
+        padding: 10px;
+    }
 }
