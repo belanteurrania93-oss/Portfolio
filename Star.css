@@ -148,11 +148,13 @@ h1 {
     color: #ffffff;
 }
 #aboutme
-{
-    font-family: Lavolta;
+{  
+    font-family: 'Lavolta', serif;
+  
 }
         /* Main Content */
         .main-content {
+            font-family: 'Lavolta', serif;
             margin-left: 280px; /* Same width as sidebar */
             margin-right: 50px;
             padding: 20px;
