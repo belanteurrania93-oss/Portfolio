@@ -84,8 +84,11 @@ body {
         }
 /* Sidebar Styles */
 .sidebar {
-    width: 220px;
-    height: 100vh; /* Full height */
+
+    width: 20%;        /* Use percentage instead of fixed px */
+    max-width: 250px;  /* But don't let it get TOO big */
+    min-width: 180px;  /* And don't let it get TOO small */
+    height: 100vh;
     background-color: #000000;
     color: white;
     position: fixed; /* Stays in place */
@@ -101,6 +104,25 @@ body {
     animation: slideInSidebar 1s ease-out forwards;
 
 }
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;       /* Take up the full width of the phone */
+        height: auto;      /* Height depends on the buttons inside */
+        position: fixed;   /* Stay at the top (or bottom) */
+        flex-direction: row; /* Buttons sit side-by-side instead of stacked */
+        justify-content: space-around; /* Space buttons evenly */
+        gap: 10px;         /* Smaller gap for small screens */
+        padding: 10px;
+        bottom: 0;         /* Optional: Put it at the bottom like an app menu */
+        top: auto;         /* If putting it at the bottom, reset 'top' */
+    }
+
+    .sidebar a {
+        font-size: 18px;   /* Shrink text so it fits */
+        padding: 10px;
+    }
+}
+
 @keyframes slideInSidebar {
     from {
         transform: translateX(-100%);
