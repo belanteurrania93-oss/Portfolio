@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Lavolta Swash';
+    font-family: 'Lavolta';
     /* This assumes your file is named Lavolta.woff2 and is in a folder named fonts */
-    src: url('./fonts/Lavolta.swash.woff') format('woff');
+    src: url('./fonts/Lavolta.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 body {
     display: flex;
-    font-family: 'Lavolta swash', serif;
+    font-family: 'Lavolta', serif;
     background-color: black;
 
 }
@@ -148,7 +148,12 @@ h1 {
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
     font-size: 190px;
-     font-family: 'Lavolta', serif;
+     font-family: 'Lavolta swash', serif;
+      src: url('./fonts/Lavolta.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+
     text-shadow: 0 0 20px #a3a3a3, 0 0 20px #bdbbbb;
     color: #ffffff;
 }
