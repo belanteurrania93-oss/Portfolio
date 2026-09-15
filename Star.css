@@ -94,7 +94,7 @@ body {
     width: 20%;        /* Use percentage instead of fixed px */
     max-width: 250px;  /* But don't let it get TOO big */
     min-width: 180px;  /* And don't let it get TOO small */
-    height: 100vh;
+    height: 1000vh;
     background-color: #000000;
     color: white;
     position: fixed; /* Stays in place */
