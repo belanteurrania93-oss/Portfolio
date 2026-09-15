@@ -1,7 +1,7 @@
 @font-face {
-    font-family: 'Lavolta';
+    font-family: 'Lavolta swash';
     /* This assumes your file is named Lavolta.woff2 and is in a folder named fonts */
-    src: url('./fonts/Lavolta.woff') format('woff');
+    src: url('./fonts/Lavolta.swash.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
