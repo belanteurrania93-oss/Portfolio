@@ -130,9 +130,9 @@ body {
     padding: 45px 10px;
     transform-origin: center;
     font-size: 40px;
+    font-family: 'Lavolta', serif;
     text-shadow: 0 0 30px #ffffff, 0 0 30px #bdbbbb;
-    text-align: center; /* Center text */
-
+    text-align: center;
 }
 
 .sidebar a:hover {
@@ -476,32 +476,36 @@ h5
     margin-top: 70px; 
  
 }
+
 @media (max-width: 768px) {
     .sidebar {
-        width: 100vw;       /* Force it to span the full phone width */
-        height: 100dvh;       /* Give it a fixed slim height */
-        position: fixed;    
-        top: 0;             /* Stick it to the top */
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        height: auto;
+        min-height: 60px;
+        position: fixed;
+        top: 0;
         left: 0;
-        flex-direction: row; /* Horizontal line */
-        gap: 10px;          /* Small gap so buttons don't fall off screen */
-        padding: 0 10px;
-        justify-content: center; 
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
         align-items: center;
-        border-bottom: 1px solid #333; /* Optional: adds a little divider */
+        border-bottom: 1px solid #333;
     }
 
     .sidebar a {
-        font-size: 16px;    /* Much smaller for mobile */
+        font-size: 16px;
         padding: 5px;
         text-shadow: 0 0 10px #ffffff;
     }
 
-    /* CRITICAL: This stops your text from being hidden behind the sidebar */
-    .main-content, h1 {
-        margin-left: 0 !important; 
-        margin-top: 100px !important; /* Push content down below the top bar */
+    .main-content,
+    h1 {
+        margin-left: 0 !important;
+        margin-top: 100px !important;
         width: 100%;
-        font-size: 40px; /* Shrink that massive 190px H1 for mobile */
+        font-size: 40px;
     }
 }
